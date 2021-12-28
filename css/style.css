@@ -154,6 +154,17 @@ header {
   }
 }
 
+@media screen and (min-width: 2560px) {
+
+  .menu nav {
+    gap: 100px;
+  }
+
+  .banner {
+    gap: 70px;
+  }
+}
+
 @media screen and (max-width:768px){
   html {
     font-size: 70%;
