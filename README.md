@@ -15,7 +15,7 @@
 ## Preview
 
 
-![front-end developer](https://user-images.githubusercontent.com/68918326/147417443-57ca25e3-0ea3-445c-9126-870c12567e17.PNG)
+![portifólio](https://user-images.githubusercontent.com/68918326/147676320-a8904864-00ff-43ae-94f5-519cdc67c09a.gif)
 
 <hr>
 <h3 align="center">🚧PÁGINA EM CONSTRUÇÃO🚧</h3>
