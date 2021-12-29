@@ -102,24 +102,18 @@ header {
   cursor: pointer;
   padding: 12px 48px;
   border-radius: 5px;
-  box-shadow: 4px 5px 6px rgb(4, 25, 37);
-  background: #0F2027;
-  background: -webkit-linear-gradient(to right, #0F2027, #203A43, #0F2027);
-  background: linear-gradient(to right, #0F2027, #203A43, #0F2027);
-
+  box-shadow: 5px 7px 6px rgb(4, 25, 37);
+  background-color: #224c68;
   color: #FFFFFF;
   font-size: 1.2rem;
   letter-spacing: 2px;
+  text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
 
   animation: movimentar 1s forwards;
 }
 
 .banner button:hover {
-  background: #0F2027;
-  
-  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #2C5364);  
-  background: linear-gradient(to left, #2C5364, #203A43, #2C5364);
-  box-shadow: 4px 5px 4px rgb(0, 0, 0);
+  background: #2f668b;
 }
 
 .img-bottom {
@@ -138,19 +132,91 @@ header {
 
 /*Sessão Projetos*/
 .sessao-projetos {
-  border: 1px solid red;
   width: 100%;
   height: 100vh;
   background-color: rgb(255, 255, 255);
-  padding: 1rem;
+  padding: 4rem 1rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5rem;
 }
 
 .sessao-projetos h2 {
-  border-bottom: 0.2rem solid 
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid #224c68;
+}
+
+.projetos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 27rem;
+  height: 19rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgb(26, 26, 26);
+  position: relative;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #8f8c8c;
+  border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  opacity: 0.7;
+}
+
+.card-img-wrapper img:hover {
+  opacity: 1;
+}
+
+.card-info {
+  padding: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  text-shadow: 0.2rem 0.2rem 3px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card h3 {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  letter-spacing: 0.08rem;
+}
+
+.card button {
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 7px 6px rgb(4, 25, 37);
+  background-color: #224c68;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
+
+  animation: movimentar 1s forwards;
+}
+
+.card button:hover {
+  background: #2f668b;
 }
 
 
