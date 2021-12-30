@@ -67,7 +67,7 @@ header {
 }
 
 .menu nav a:hover {
-  color: rgb(26, 133, 165);
+  color: rgb(30, 119, 160);
 }
 
 .banner {
@@ -104,7 +104,7 @@ header {
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
   /*background-color: #224c68;*/
-  background-color: rgb(26, 133, 165);
+  background-color: rgb(18, 77, 105);
   color: #FFFFFF;
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -114,7 +114,7 @@ header {
 }
 
 .banner button:hover {
-  background: rgb(20, 100, 124);
+  background: rgb(30, 119, 160);
 }
 
 .img-bottom {
@@ -131,6 +131,77 @@ header {
 }
 
 
+/*Sessão Tecnologias*/
+.sessao-tecnologias {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(17, 17, 17);
+  padding: 4rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sessao-header h2 {
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid rgb(30, 119, 160);
+}
+
+.sessao-tecnologias h2 {
+  color: rgb(255, 255, 255);
+}
+
+.tecnologias {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.card-tec {
+  width: 24rem;
+  height: 16rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(37, 37, 37);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0rem 0rem 1rem rgb(30, 119, 160);
+}
+
+.card-tec:hover {
+  background-color: rgb(17, 69, 94);
+  animation: card-move-up 1s;
+}
+
+.card-tec:hover .simbolo{
+  color: rgb(255, 255, 255);
+}
+
+.card-tec .simbolo {
+  color: rgb(30, 119, 160);
+  font-size: 3rem;
+}
+
+.card-tec h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.card-tec p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
 /*Sessão Projetos*/
 .sessao-projetos {
   width: 100%;
@@ -141,11 +212,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.sessao-projetos h2 {
-  padding-bottom: 2rem;
-  border-bottom: 0.2rem solid rgb(26, 133, 165);
+  gap: 1rem;
 }
 
 .projetos {
@@ -217,7 +284,7 @@ header {
   padding: 0.7rem 2rem;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  background-color: rgb(26, 133, 165);
+  background-color: rgb(18, 77, 105);
   color: #FFFFFF;
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
@@ -227,15 +294,14 @@ header {
 }
 
 .card button:hover {
-  background-color: rgb(20, 100, 124);
+  background-color: rgb(30, 119, 160);
 }
 
 
 
 
 
-/*Animações e Medias queries*/
-
+/*Animações*/
 @keyframes expandir {
   0% {
     transform: scale(1.3);
@@ -255,6 +321,18 @@ header {
   }
 }
 
+@keyframes card-move-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-0.6rem);
+  }
+}
+
+
+/*Responsividades com  Medias Queries*/
 @media screen and (min-width: 2560px) {
 
   .menu nav {
