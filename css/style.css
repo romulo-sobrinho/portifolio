@@ -67,7 +67,7 @@ header {
 }
 
 .menu nav a:hover {
-  color: #224c68;
+  color: rgb(26, 133, 165);
 }
 
 .banner {
@@ -103,17 +103,18 @@ header {
   padding: 12px 48px;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  background-color: #224c68;
+  /*background-color: #224c68;*/
+  background-color: rgb(26, 133, 165);
   color: #FFFFFF;
   font-size: 1.2rem;
   letter-spacing: 2px;
-  text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.4);
 
   animation: movimentar 1s forwards;
 }
 
 .banner button:hover {
-  background: #2f668b;
+  background: rgb(20, 100, 124);
 }
 
 .img-bottom {
@@ -144,7 +145,7 @@ header {
 
 .sessao-projetos h2 {
   padding-bottom: 2rem;
-  border-bottom: 0.2rem solid #224c68;
+  border-bottom: 0.2rem solid rgb(26, 133, 165);
 }
 
 .projetos {
@@ -216,7 +217,7 @@ header {
   padding: 0.7rem 2rem;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  background-color: #224c68;
+  background-color: rgb(26, 133, 165);
   color: #FFFFFF;
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
@@ -226,7 +227,7 @@ header {
 }
 
 .card button:hover {
-  background: #2f668b;
+  background-color: rgb(20, 100, 124);
 }
 
 
