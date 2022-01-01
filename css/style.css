@@ -266,11 +266,13 @@ header {
   border-radius: 0.5rem;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(26, 26, 26);
   position: relative;
+  transition: .3s ease-out;
 }
 
 .card:hover img{
-  opacity: 0.7;
-  box-shadow: 0.4rem 0.4rem 1rem rgb(26, 26, 26);
+  /*opacity: 0.7;*/
+  filter: blur(2px) grayscale(0.3);
+  box-shadow: 0 0 1rem rgb(124, 124, 124);
 }
 
 .card:hover .card-info {
