@@ -1,3 +1,33 @@
+/*Mulish*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;700;900&display=swap');
+
+/*Nunito*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap');
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+/*Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/*Varela Round*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/*Lora*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+
+/*Merriweather*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+:root {
+  --text-menu: 'Lora', serif;
+  --text-h1: 'Merriweather Sans', sans-serif;
+  --text-name: 'Ubuntu', sans-serif;
+  --text-header: 'Ubuntu', sans-serif;
+  --text-primary: 'Nunito', sans-serif;
+  --text-button: 'Roboto', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +42,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: var(--text-primary);
 }
 
 header {
@@ -57,12 +88,13 @@ header {
 
 .menu nav {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .menu nav a {
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-family: var(--text-menu);
   letter-spacing: 2px;
 }
 
@@ -85,7 +117,8 @@ header {
 .banner h1 {
   color: #ffffff;
   font-size: 3.5rem;
-  text-shadow: 0.2rem 0.3rem 3px rgba(0, 0, 0, 0.4);
+  font-family: var(--text-h1);
+  text-shadow: 0.3rem 0.4rem 3px rgba(0, 0, 0, 0.4);
 
   animation: movimentar 2s forwards;
 }
@@ -93,6 +126,7 @@ header {
 .banner p {
   color: #ffffff;
   font-size: 2.1rem;
+  font-family: var(--text-name);
   text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
 
   animation: movimentar 1s forwards;
@@ -103,10 +137,10 @@ header {
   padding: 12px 48px;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  /*background-color: #224c68;*/
   background-color: rgb(18, 77, 105);
   color: #FFFFFF;
   font-size: 1.2rem;
+  font-family: var(--text-button);
   letter-spacing: 2px;
   text-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.4);
 
@@ -145,6 +179,7 @@ header {
 }
 
 .sessao-header h2 {
+  font-family: var(--text-header);
   padding-bottom: 2rem;
   border-bottom: 0.2rem solid rgb(30, 119, 160);
 }
@@ -287,6 +322,7 @@ header {
   background-color: rgb(18, 77, 105);
   color: #FFFFFF;
   font-size: 0.9rem;
+  font-family: var(--text-button);
   letter-spacing: 0.15rem;
   text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
 
