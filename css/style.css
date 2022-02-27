@@ -20,6 +20,30 @@
   --text-header: 'Ubuntu', sans-serif;
   --text-primary: 'Nunito', sans-serif;
   --text-button: 'Roboto', sans-serif;
+  --font-size-html: 62.5%;
+  --font-size-body: 1.6rem;
+  --font-size-pagetitle: 4rem;
+  --font-size-link: 1.8rem;
+  --font-size-banner-h1: 5.4rem;
+  --font-size-banner-p: 3.2rem;
+  --font-size-btn: 1.8rem;
+  --font-size-card-title: 2.5rem;
+  --font-size-card-text: 1.5rem;
+  --font-size-card-btn: 1.5rem;
+  --color-sessao-tecnologia-title: rgb(255, 255, 255);
+  --color-nav-link: rgb(255, 255, 255);
+  --color-nav-link-hover: rgb(30, 119, 160);
+  --color-banner: rgb(255, 255, 255);
+  --color-banner-btn: rgb(255, 255, 255);
+  --color-card-tec: rgb(255, 255, 255);
+  --color-card-projetos: rgb(255, 255, 255);
+  --background-color-btn: rgb(18, 77, 105);
+  --background-color-btn-hover: rgb(30, 119, 160);
+  --background-color-sessao-tecnologias: rgb(17, 17, 17);
+  --background-color-card-tec: rgb(37, 37, 37);
+  --background-color-card-tec-hover: rgb(17, 69, 94);
+  --background-color-sessao-projetos: rgb(255, 255, 255);
+  --background-color-card-projetos: #444444;
 }
 
 * {
@@ -31,15 +55,15 @@
 }
 
 html {
-  font-size: 62,5%;
+  font-size: var(--font-size-html);
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: var(--font-size-body);
   font-family: var(--text-primary);
 }
 
-header {
+.sessao-inicio {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -64,7 +88,7 @@ header {
   animation: expandir 8s;
 }
 
-.menu {
+.header {
   width: 100%;
   padding: 10px;
 
@@ -75,27 +99,26 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
-.menu img {
+.header img {
   height: 35px;
 }
 
-.menu nav {
+.header nav {
   display: flex;
   gap: 40px;
 }
 
-.menu nav a {
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+.header nav a {
+  color: var(--color-nav-link);
+  font-size: var(--font-size-link);
   font-family: var(--text-menu);
   letter-spacing: 2px;
 }
 
-.menu nav a:hover {
-  color: rgb(30, 119, 160);
+.header nav a:hover {
+  color: var(--color-nav-link-hover);
 }
 
 .banner {
@@ -111,8 +134,8 @@ header {
 }
 
 .banner h1 {
-  color: #ffffff;
-  font-size: 3.5rem;
+  color: var(--color-banner);
+  font-size: var(--font-size-banner-h1);
   font-family: var(--text-h1);
   text-shadow: 0.3rem 0.4rem 3px rgba(0, 0, 0, 0.4);
 
@@ -120,8 +143,8 @@ header {
 }
 
 .banner p {
-  color: #ffffff;
-  font-size: 2.1rem;
+  color: var(--color-banner);
+  font-size: var(--font-size-banner-p);
   font-family: var(--text-name);
   text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
 
@@ -133,9 +156,9 @@ header {
   padding: 12px 48px;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  background-color: rgb(18, 77, 105);
-  color: #FFFFFF;
-  font-size: 1.2rem;
+  background-color: var(--background-color-btn);
+  color: var(--color-banner-btn);
+  font-size: var(--font-size-btn);
   font-family: var(--text-button);
   letter-spacing: 2px;
   text-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.4);
@@ -144,7 +167,7 @@ header {
 }
 
 .banner button:hover {
-  background: rgb(30, 119, 160);
+  background: var(--background-color-btn-hover);
 }
 
 .img-bottom {
@@ -165,7 +188,7 @@ header {
 .sessao-tecnologias {
   width: 100%;
   height: 100vh;
-  background-color: rgb(17, 17, 17);
+  background-color: var(--background-color-sessao-tecnologias);
   padding: 4rem 1rem;
 
   display: flex;
@@ -176,12 +199,13 @@ header {
 
 .sessao-header h2 {
   font-family: var(--text-header);
+  font-size: var(--font-size-pagetitle);
   padding-bottom: 2rem;
   border-bottom: 0.2rem solid rgb(30, 119, 160);
 }
 
 .sessao-tecnologias h2 {
-  color: rgb(255, 255, 255);
+  color: var(--color-sessao-tecnologia-title);
 }
 
 .tecnologias {
@@ -199,18 +223,19 @@ header {
   height: 16rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: rgb(37, 37, 37);
-  color: rgb(255, 255, 255);
+  background-color: var(--background-color-card-tec);
+  color: var(--color-card-tec);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   box-shadow: 0rem 0rem 1rem rgb(30, 119, 160);
+  transition: all 0.6s;
 }
 
 .card-tec:hover {
-  background-color: rgb(17, 69, 94);
+  background-color: var(--background-color-card-tec-hover);
   animation: card-move-up 1s;
 }
 
@@ -224,12 +249,12 @@ header {
 }
 
 .card-tec h3 {
-  font-size: 1.6rem;
+  font-size: var(--font-size-card-title);
   text-transform: uppercase;
 }
 
 .card-tec p {
-  font-size: 1rem;
+  font-size: var(--font-size-card-text);
   text-align: justify;
 }
 
@@ -237,7 +262,7 @@ header {
 .sessao-projetos {
   width: 100%;
   height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background-color-sessao-projetos);
   padding: 4rem 1rem;
 
   display: flex;
@@ -279,7 +304,7 @@ header {
 .card-img-wrapper {
   width: 100%;
   height: 100%;
-  background-color: #444444;
+  background-color: var(--background-color-card-projetos);
   border-radius: 0.5rem;
 }
 
@@ -306,8 +331,8 @@ header {
 }
 
 .card h3 {
-  color: #FFFFFF;
-  font-size: 1.6rem;
+  color: var(--color-card-projetos);
+  font-size: var(--font-size-card-title);
   font-weight: bolder;
   letter-spacing: 0.05rem;
 }
@@ -317,18 +342,17 @@ header {
   padding: 0.7rem 2rem;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
-  background-color: rgb(18, 77, 105);
+  background-color: var(--background-color-btn);
   color: #FFFFFF;
-  font-size: 0.9rem;
+  font-size: var(--font-size-card-btn);
   font-family: var(--text-button);
   letter-spacing: 0.15rem;
   text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
-
   animation: movimentar 1s forwards;
 }
 
 .card button:hover {
-  background-color: rgb(30, 119, 160);
+  background-color: var(--background-color-btn-hover);
 }
 
 
@@ -361,12 +385,14 @@ header {
   }
 
   100% {
-    transform: translateY(-0.6rem);
+    transform: translateY(-1rem);
   }
 }
 
 
 /*Responsividades com  Medias Queries*/
+
+/*
 @media screen and (min-width: 2560px) {
 
   .menu nav {
@@ -428,4 +454,6 @@ header {
     padding: 10px 30px;
   }
 }
+
+*/
 
