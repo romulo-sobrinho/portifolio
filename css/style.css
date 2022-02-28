@@ -22,20 +22,22 @@
   --text-button: 'Roboto', sans-serif;
   --font-size-html: 62.5%;
   --font-size-body: 1.6rem;
-  --font-size-pagetitle: 4rem;
-  --font-size-link: 1.8rem;
-  --font-size-banner-h1: 5.4rem;
-  --font-size-banner-p: 3.2rem;
-  --font-size-btn: 1.8rem;
-  --font-size-card-title: 2.5rem;
-  --font-size-card-text: 1.5rem;
-  --font-size-card-btn: 1.5rem;
+  --font-size-pagetitle: 2.5rem;
+  --font-size-link: 1.2rem;
+  --font-size-banner-h1: 2.4rem;
+  --font-size-banner-p: 2rem;
+  --font-size-btn: 1.5rem;
+  --font-size-card-title: 1.6rem;
+  --font-size-card-text: 1rem;
+  --font-size-card-btn: 1rem;
   --color-sessao-tecnologia-title: rgb(255, 255, 255);
   --color-nav-link: rgb(255, 255, 255);
   --color-nav-link-hover: rgb(30, 119, 160);
   --color-banner: rgb(255, 255, 255);
   --color-banner-btn: rgb(255, 255, 255);
   --color-card-tec: rgb(255, 255, 255);
+  --color-card-tec-simbolo: rgb(30, 119, 160);
+  --color-card-tec-simbolo-hover: rgb(255, 255, 255); 
   --color-card-projetos: rgb(255, 255, 255);
   --background-color-btn: rgb(18, 77, 105);
   --background-color-btn-hover: rgb(30, 119, 160);
@@ -44,6 +46,7 @@
   --background-color-card-tec-hover: rgb(17, 69, 94);
   --background-color-sessao-projetos: rgb(255, 255, 255);
   --background-color-card-projetos: #444444;
+  --background-color-card-projetos-info: rgb(37, 37, 37,0.9);
 }
 
 * {
@@ -84,37 +87,47 @@ body {
   object-fit: cover;
   /*opacity: 0.6;*/
   filter: grayscale(1) opacity(0.7);
-
   animation: expandir 8s;
 }
 
 .header {
   width: 100%;
   padding: 10px;
-
   position: absolute;
   top: 0%;
-
   border-bottom: 0.4px solid rgb(204, 194, 194);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .container-header {
+  border: 1px solid red;
+  width: 90%;
+  max-width: 1350px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .header img {
-  height: 35px;
+  height: 25px;
+  transition: all 0.4s;
+}
+
+.header img:hover {
+  animation: girar 1.5s;
 }
 
 .header nav {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .header nav a {
   color: var(--color-nav-link);
   font-size: var(--font-size-link);
   font-family: var(--text-menu);
-  letter-spacing: 2px;
 }
 
 .header nav a:hover {
@@ -130,7 +143,7 @@ body {
   flex-direction: column;
   gap: 25px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .banner h1 {
@@ -138,7 +151,6 @@ body {
   font-size: var(--font-size-banner-h1);
   font-family: var(--text-h1);
   text-shadow: 0.3rem 0.4rem 3px rgba(0, 0, 0, 0.4);
-
   animation: movimentar 2s forwards;
 }
 
@@ -147,13 +159,12 @@ body {
   font-size: var(--font-size-banner-p);
   font-family: var(--text-name);
   text-shadow: 0.1rem 0.2rem 4px rgba(0, 0, 0, 0.4);
-
   animation: movimentar 1s forwards;
 }
 
 .banner button {
   cursor: pointer;
-  padding: 12px 48px;
+  padding: 10px 36px;
   border-radius: 5px;
   box-shadow: 5px 7px 6px rgb(4, 25, 37);
   background-color: var(--background-color-btn);
@@ -162,7 +173,6 @@ body {
   font-family: var(--text-button);
   letter-spacing: 2px;
   text-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.4);
-
   animation: movimentar 1s forwards;
 }
 
@@ -180,28 +190,30 @@ body {
 }
 
 .img-bottom img {
-  height: 60px;
+  height: 35px;
 }
 
-
-/*Sessão Tecnologias*/
-.sessao-tecnologias {
+/*Sessão*/
+.sessao {
   width: 100%;
-  height: 100vh;
-  background-color: var(--background-color-sessao-tecnologias);
+  min-height: 100vh;
   padding: 4rem 1rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .sessao-header h2 {
   font-family: var(--text-header);
   font-size: var(--font-size-pagetitle);
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   border-bottom: 0.2rem solid rgb(30, 119, 160);
+}
+
+/*Sessão Tecnologias*/
+.sessao-tecnologias {
+  background-color: var(--background-color-sessao-tecnologias);
 }
 
 .sessao-tecnologias h2 {
@@ -209,8 +221,9 @@ body {
 }
 
 .tecnologias {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,11 +253,11 @@ body {
 }
 
 .card-tec:hover .simbolo{
-  color: rgb(255, 255, 255);
+  color: var(--color-card-tec-simbolo-hover);
 }
 
 .card-tec .simbolo {
-  color: rgb(30, 119, 160);
+  color: var(--color-card-tec-simbolo);
   font-size: 3rem;
 }
 
@@ -260,20 +273,13 @@ body {
 
 /*Sessão Projetos*/
 .sessao-projetos {
-  width: 100%;
-  height: 100vh;
   background-color: var(--background-color-sessao-projetos);
-  padding: 4rem 1rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
 }
 
 .projetos {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,29 +288,31 @@ body {
 }
 
 .card {
-  width: 24rem;
-  height: 16rem;
+  max-width: 48rem;
+  max-height: 32rem;
   border-radius: 0.5rem;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(26, 26, 26);
+  overflow: hidden;
   position: relative;
-  transition: .3s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .card:hover img{
   opacity: 0.9;
-  filter: blur(2px) grayscale(0.3);
-  box-shadow: 0 0 1rem rgb(124, 124, 124);
+  filter: blur(0.1rem) grayscale(0.4);
 }
 
 .card:hover .card-info {
+  animation: card-info-down 0.6s;
+  animation-timing-function: linear;
   visibility: visible;
   opacity: 1;
+  background-color: var(--background-color-card-projetos-info);
 }
 
 .card-img-wrapper {
   width: 100%;
   height: 100%;
-  background-color: var(--background-color-card-projetos);
   border-radius: 0.5rem;
 }
 
@@ -317,17 +325,22 @@ body {
 }
 
 .card-info {
+  width: 100%;
+  height: 40%;
   padding: 1rem;
   position: absolute;
-  bottom: 3rem;
-  left: 2rem;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0.5rem 0.5rem;
   text-shadow: 0.2rem 0.2rem 3px rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   visibility: hidden;
   opacity: 0;
+  transition: all 0.5s;
 }
 
 .card h3 {
@@ -371,11 +384,21 @@ body {
 
 @keyframes movimentar {
   0% {
-    transform: translateY(15rem) rotateY(-30deg);
+    transform: translateY(30rem) rotateY(-30deg);
   }
 
   100% {
     transform: translateY(0) rotateY(0);
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -386,6 +409,18 @@ body {
 
   100% {
     transform: translateY(-1rem);
+  }
+}
+
+@keyframes card-info-down {
+  0% {
+    top: 0;
+    bottom: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  100% {
+    bottom: 0;
   }
 }
 
