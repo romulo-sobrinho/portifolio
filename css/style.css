@@ -30,6 +30,7 @@
   --font-size-card-title: clamp(1.6rem, 2vw + 0.1rem, 2.6rem);
   --font-size-card-text: clamp(1rem, 1vw + 0.1rem, 1.8rem);
   --font-size-card-btn: clamp(0.9rem, 1vw + 0.1rem, 1.5rem);
+  --font-size-card-info-title: clamp(1.6rem, 2vw + 0.1rem, 2rem);
   --color-sessao-tecnologia-title: rgb(0, 0, 0);
   --color-sessao-projetos-title: rgb(255, 255, 255);
   --color-nav-link: rgb(255, 255, 255);
@@ -290,6 +291,7 @@ body {
 /*Sessão Projetos*/
 .sessao-projetos {
   background-color: var(--background-color-sessao-projetos);
+  position: relative;
 }
 
 .sessao-projetos h2 {
@@ -369,7 +371,7 @@ body {
 
 .card h3 {
   color: var(--color-card-projetos);
-  font-size: var(--font-size-card-title);
+  font-size: var(--font-size-card-info-title);
   font-weight: bolder;
   letter-spacing: 0.05rem;
 }
