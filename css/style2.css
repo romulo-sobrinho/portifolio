@@ -55,6 +55,7 @@
   --box-shadow-card-projetos: 4px 4px 15px 1px #C0C5CE;
   --box-shadow-card-projetos-hover: 0 0 8px #34bbff;
   --border-radius: 0.8rem;
+  --padding-sessao-header: 4rem 1rem;
 }
 
 * {
