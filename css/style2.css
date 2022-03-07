@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 :root {
+  --max-width: 1200px;
   --text-menu: 'Lora', serif;
   --text-h1: 'Merriweather Sans', sans-serif;
   --text-name: 'Ubuntu', sans-serif;
@@ -23,7 +24,7 @@
   --font-size-html: 62.5%;
   --font-size-body: 1.6rem;
   --font-size-pagetitle: clamp(2.5rem, 3vw + 0.1rem, 5rem);
-  --font-size-link: clamp(1.2rem, 3vw + 0.1rem, 2rem);
+  --font-size-link: clamp(1.2rem, 2.5vw + 0.1rem, 2rem);
   --font-size-banner-h1: clamp(2.5rem, 3vw + 0.1rem, 5rem);
   --font-size-banner-p: clamp(2rem, 2vw + 0.1rem, 3.5rem);
   --font-size-btn: clamp(1.5rem, 1.5vw + 0.1rem, 2.5rem);
@@ -55,7 +56,7 @@
   --box-shadow-card-projetos: 4px 4px 15px 1px #C0C5CE;
   --box-shadow-card-projetos-hover: 0 0 8px #34bbff;
   --border-radius: 0.8rem;
-  --padding-sessao-header: 4rem 1rem;
+  --padding-sessao-header: 4rem 1rem 1rem 1rem;
 }
 
 * {
@@ -75,13 +76,9 @@ body {
   font-family: var(--text-primary);
 }
 
-
-
 .sessao-inicio {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  position: relative;
 }
 
 .img-wrapper {
@@ -96,25 +93,38 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /*opacity: 0.6;*/
   filter: grayscale(1) opacity(0.7);
   animation: expandir 8s;
 }
 
-.header {
+.container-inicio {
   width: 100%;
-  padding: 10px;
+  height: 100%;
+  
   position: absolute;
-  top: 0%;
-  border-bottom: 0.4px solid rgb(204, 194, 194);
-  display: flex;
+  top: 0;
+
+  display: grid;
+  grid-template-areas: "header"
+                        "main"
+                        "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  border: 3px solid red;
+
+  grid-area: header;
+
+  display: flex; /*Display flex para centralizar o container-header, sem isso ao usar no container menos de 100%, ficará deslocado a esquerda*/
   justify-content: center;
   align-items: center;
 }
 
 .header .container-header {
+  border: 1px solid white;
   width: 90%;
-  max-width: 1350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,11 +154,16 @@ body {
   color: var(--color-nav-link-hover);
 }
 
-.banner {
-  position: absolute;
-  top: 34%;
-  left: 16%;
+.main {
+  border: 3px solid blue;
+  grid-area: main;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -195,11 +210,14 @@ body {
   animation-timing-function: ease;
 }
 
+.footer {
+  border: 3px solid green;
+  grid-area: footer;
+}
+
 .img-bottom {
   width: 100%;
   padding: 10px;
-  position: absolute;
-  bottom: 0px;
   border-top: 0.4px solid rgb(204, 194, 194);
   text-align: center;
 }
@@ -208,15 +226,30 @@ body {
   height: 35px;
 }
 
-/*Sessão*/
+
+/*SESSÃO*/
 .sessao {
   width: 100%;
   min-height: 100vh;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
+}
+
+/*SESSÃO TECNOLOGIAS*/
+.sessao-tecnologias {
+  display: grid;
+  grid-template-areas: "header"
+                       "main";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+
+  background-color: var(--background-color-sessao-tecnologias);
+}
+
+.sessao-tecnologias .sessao-header h2 {
+  color: var(--color-sessao-tecnologia-title);
+}
+
+.sessao-header {
+  padding: var(--padding-sessao-header);
 }
 
 .sessao-header h2 {
@@ -226,27 +259,21 @@ body {
   border-bottom: 0.2rem solid #28eedb;
 }
 
-/*Sessão Tecnologias*/
-.sessao-tecnologias {
-  background-color: var(--background-color-sessao-tecnologias);
-}
-
-.sessao-tecnologias h2 {
-  color: var(--color-sessao-tecnologia-title);
-}
-
 .tecnologias {
+  border: 1px solid green;
   width: 80%;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-wrap: nowrap;
+  gap: 4rem;
 }
 
 .card-tec {
+  border: 1px solid black;
   max-width: 36rem;
   max-height: 18rem;
   padding: 1.2rem;
@@ -291,28 +318,38 @@ body {
   text-align: justify;
 }
 
-/*Sessão Projetos*/
+
+/*SESSÃO PROJETOS*/
 .sessao-projetos {
+  display: grid;
+  grid-template-areas: "header"
+                       "main";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+
   background-color: var(--background-color-sessao-projetos);
-  position: relative;
 }
 
-.sessao-projetos h2 {
+.sessao-projetos .sessao-header h2 {
   color: var(--color-sessao-projetos-title);
 }
 
 .projetos {
+  border: 1px solid green;
+
   width: 80%;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 4rem;
 }
 
 .card {
+  border: 1px solid rgb(176, 10, 218);
   max-width: 30rem;
   max-height: 20rem;
   border-radius: 0.5rem;
@@ -397,10 +434,6 @@ body {
   filter: drop-shadow(0rem 0rem 1rem #4FE8E4);
 }
 
-
-
-
-
 /*Animações*/
 @keyframes expandir {
   0% {
@@ -456,70 +489,44 @@ body {
   }
 }
 
-/*Responsividades com  Medias Queries*/
-
-/*
-@media screen and (min-width: 2560px) {
-
-  .menu nav {
-    gap: 100px;
+@media screen and (min-width: 1200px) {
+  .container-inicio {
+    grid-template: ".           header       ."   auto
+                   ".           main         ."   1fr
+                   ".           footer       ."   auto
+                   / 1fr   var(--max-width)  1fr;
   }
 
-  .banner {
-    gap: 50px;
-  }
-}
-
-@media screen and (max-width:768px){
-  html {
-    font-size: 70%;
-  }
-
-  .banner {
-    top: 30%;
-    left: 15%;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  .banner button {
-    padding: 12px 40px;
+  .header nav {
+    gap: 60px;
   }
 }
 
-@media screen and (max-width:560px){
-  html {
-    font-size: 60%;
-  }
 
-  .banner {
-    left: 10%;
-  }
-
-  .banner button {
-    padding: 10px 35px;
-  }
-}
-
-@media screen and (max-width:400px){
-  html {
-    font-size: 55%;
-  }
-
-  .menu nav {
-    gap: 20px;
-  }
-
-  .banner {
-    left: 10%;
+@media screen and (min-width: 768px) {
+  .header .container-header {
+    border: 1px solid white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
+  .header nav {
+    gap: 35px;
+  }
 
-  .banner button {
-    padding: 10px 30px;
+  .projetos {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .card {
+    width: 30rem;
+    height: 20rem;
   }
 }
-
-*/
 

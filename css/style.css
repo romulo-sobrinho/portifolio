@@ -14,7 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 :root {
-  --max-width: 120rem;
+  --max-width: 1200px;
   --text-menu: 'Lora', serif;
   --text-h1: 'Merriweather Sans', sans-serif;
   --text-name: 'Ubuntu', sans-serif;
@@ -24,7 +24,7 @@
   --font-size-html: 62.5%;
   --font-size-body: 1.6rem;
   --font-size-pagetitle: clamp(2.5rem, 3vw + 0.1rem, 5rem);
-  --font-size-link: clamp(1.2rem, 3vw + 0.1rem, 2rem);
+  --font-size-link: clamp(1.2rem, 2.5vw + 0.1rem, 2rem);
   --font-size-banner-h1: clamp(2.5rem, 3vw + 0.1rem, 5rem);
   --font-size-banner-p: clamp(2rem, 2vw + 0.1rem, 3.5rem);
   --font-size-btn: clamp(1.5rem, 1.5vw + 0.1rem, 2.5rem);
@@ -266,7 +266,7 @@ body {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
   gap: 4rem;
@@ -496,4 +496,37 @@ body {
                    ".           footer       ."   auto
                    / 1fr   var(--max-width)  1fr;
   }
+
+  .header nav {
+    gap: 60px;
+  }
 }
+
+
+@media screen and (min-width: 768px) {
+  .header .container-header {
+    border: 1px solid white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header nav {
+    gap: 35px;
+  }
+
+  .projetos {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .card {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+
