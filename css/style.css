@@ -113,17 +113,17 @@ body {
 }
 
 .header {
-  border: 3px solid red;
-
   grid-area: header;
 
   display: flex; /*Display flex para centralizar o container-header, sem isso ao usar no container menos de 100%, ficará deslocado a esquerda*/
   justify-content: center;
   align-items: center;
+
+  padding: 0.8rem;
+  border-bottom: 0.4px solid rgb(204, 194, 194);
 }
 
 .header .container-header {
-  border: 1px solid white;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -155,7 +155,6 @@ body {
 }
 
 .main {
-  border: 3px solid blue;
   grid-area: main;
 
   display: flex;
@@ -211,14 +210,13 @@ body {
 }
 
 .footer {
-  border: 3px solid green;
   grid-area: footer;
+  border-top: 0.4px solid rgb(204, 194, 194);
 }
 
 .img-bottom {
   width: 100%;
   padding: 10px;
-  border-top: 0.4px solid rgb(204, 194, 194);
   text-align: center;
 }
 
@@ -260,7 +258,6 @@ body {
 }
 
 .tecnologias {
-  border: 1px solid green;
   width: 80%;
   height: 100%;
   padding: 2rem 1rem;
@@ -273,7 +270,6 @@ body {
 }
 
 .card-tec {
-  border: 1px solid black;
   max-width: 36rem;
   max-height: 18rem;
   padding: 1.2rem;
@@ -335,8 +331,6 @@ body {
 }
 
 .projetos {
-  border: 1px solid green;
-
   width: 80%;
   height: 100%;
   padding: 2rem 1rem;
@@ -349,7 +343,6 @@ body {
 }
 
 .card {
-  border: 1px solid rgb(176, 10, 218);
   max-width: 30rem;
   max-height: 20rem;
   border-radius: 0.5rem;
@@ -505,7 +498,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .header .container-header {
-    border: 1px solid white;
     width: 80%;
     display: flex;
     justify-content: space-between;
